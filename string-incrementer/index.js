@@ -15,8 +15,6 @@ function incrementString(word) {
         }
     }
 
-    const frontZeros = Array.from(number).findIndex((digit) => digit !== "0");
-
     let ans = "";
 
     if (number === "") {
