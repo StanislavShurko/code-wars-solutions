@@ -31,5 +31,3 @@ function score(dices) {
 
     return ans
 }
-
-console.log(score([2, 3, 4, 6, 2]))
