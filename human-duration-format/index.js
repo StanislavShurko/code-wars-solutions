@@ -51,6 +51,8 @@ function durationToString(duration, unit) {
 }
 
 function formatDuration(seconds) {
+    if (!seconds) return 'now';
+
     const years = getYears(seconds)
     const days = getDays(seconds) % 365
     const hours = getHours(seconds) % 24
@@ -79,7 +81,7 @@ function formatDuration(seconds) {
         }
     )
 
-    return formattedComponents.join(', ').replace(/, and /, ' and ') || 'now'
+    return formattedComponents.join(', ').replace(/, and /, ' and ');
 }
 
 console.log(formatDuration(1)) // 1 second
